@@ -19,15 +19,23 @@ class Task {
     this.columnId = columnId;
   }
 
-  // update({
-  //   name = this.name,
-  //   login = this.login,
-  //   password = this.password
-  // } = {}) {
-  //   this.name = name;
-  //   this.login = login;
-  //   this.password = password;
-  // }
+  update({
+    id = uuid(),
+    title = 'title',
+    order = 'order',
+    description = 'description',
+    userId = 'userId', // assignee
+    boardId = 'boardId',
+    columnId = 'columnId'
+  } = {}) {
+    this.id = id;
+    this.title = title;
+    this.order = order;
+    this.description = description;
+    this.userId = userId; // assignee
+    this.boardId = boardId;
+    this.columnId = columnId;
+  }
 
   static toResponse(task) {
     return task;

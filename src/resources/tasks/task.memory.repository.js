@@ -19,6 +19,7 @@ const updateById = async (id, params) => {
 };
 
 const deleteById = async id => {
+  console.log(id);
   return DB.deleteById(TABLE_NAME, id);
 };
 
