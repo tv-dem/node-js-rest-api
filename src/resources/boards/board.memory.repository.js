@@ -1,5 +1,5 @@
 const { DB } = require('../utils/DB');
-const TABLE_NAME = 'users';
+const TABLE_NAME = 'boards';
 
 const getAll = async () => {
   // TODO: mock implementation. should be replaced during task development

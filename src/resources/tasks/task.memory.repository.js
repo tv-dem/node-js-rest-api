@@ -1,5 +1,5 @@
 const { DB } = require('../utils/DB');
-const TABLE_NAME = 'users';
+const TABLE_NAME = 'tasks';
 
 const getAll = async () => {
   // TODO: mock implementation. should be replaced during task development
@@ -22,7 +22,12 @@ const deleteById = async id => {
   return DB.deleteById(TABLE_NAME, id);
 };
 
+const getBoardTasks = async params => {
+  return DB.getBoardTasks(params);
+};
+
 module.exports = {
+  getBoardTasks,
   getAll,
   create,
   getById,

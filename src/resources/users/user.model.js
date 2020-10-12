@@ -13,6 +13,16 @@ class User {
     this.password = password;
   }
 
+  update({
+    name = this.name,
+    login = this.login,
+    password = this.password
+  } = {}) {
+    this.name = name;
+    this.login = login;
+    this.password = password;
+  }
+
   static toResponse(user) {
     const { id, name, login } = user;
     return { id, name, login };
